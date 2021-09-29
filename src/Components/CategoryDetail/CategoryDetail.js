@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { CategoryContext } from "./../../App";
 
-const CategoryDetail = () => {
+const CategoryDetail = (props) => {
+    const {name } = props.product
 
     const category = useContext(CategoryContext)
 
@@ -9,7 +10,7 @@ const CategoryDetail = () => {
     return (
         <div>
             <h4>This is your category Detail has : {category}</h4>
-            <h6>Selected product : {category}</h6>
+            <h6>Selected product : {name}</h6>
         </div>
     );
 };

@@ -4,12 +4,14 @@ import { CategoryContext } from "./../../App";
 
 const Header = ( ) => {
  
-const [category , setCount] = useContext(CategoryContext)
+const [category , setCategory] = useContext(CategoryContext)
 
     return (
         <div>
             <h1>This is header : {category}</h1>
-            <button onClick={()=> setCount ( category + 1)}> Increase</button>
+            <button onClick={()=> setCategory('Laptop')}> Laptop</button>
+            <button onClick={()=> setCategory('Mobile')}> Mobile</button>
+            <button onClick={()=> setCategory( 'Camera')}> Camera</button>
         </div>
     );
 };
